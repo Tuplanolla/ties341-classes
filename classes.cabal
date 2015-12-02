@@ -1,0 +1,37 @@
+name:                ties341-classes
+version:             0.0.0
+synopsis:            Example for the course TIES341
+description:         Cool tricks with type classes!
+license:             GPL-3
+license-file:        LICENSE
+author:              Sampsa Kiiskinen
+maintainer:          tuplanolla@gmail.com
+category:            Education
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable with
+  main-is:             With.hs
+  build-depends:       base >=4.8 && <5.0,
+                       random >=1.0 && <2.0
+  default-language:    Haskell2010
+
+executable without
+  main-is:             Without.hs
+  build-depends:       base >=4.8 && <5.0,
+                       random >=1.0 && <2.0
+  default-language:    Haskell2010
+
+executable vary
+  main-is:             Vary.hs
+  other-extensions:    FlexibleInstances, InstanceSigs
+  build-depends:       base >=4.8 && <5.0
+  default-language:    Haskell2010
+
+executable between
+  main-is:             Between.hs
+  other-extensions:    FlexibleContexts, FlexibleInstances,
+                       PartialTypeSignatures
+  build-depends:       base >=4.8 && <5.0,
+                       megaparsec >=4.0 && <5.0
+  default-language:    Haskell2010
